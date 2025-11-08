@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import logo from '../assets/savvy-logo.jpg'; // <-- Use your new image here
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -58,16 +59,17 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <div className="flex-shrink-0">
-            <button
+          {/* ==== Updated Logo Section ==== */}
+          <div className="flex items-center gap-3 flex-shrink-0">
+            <img
+              src={logo}
+              alt="Savvy Spectra Logo"
+              className="h-12 w-auto cursor-pointer"
               onClick={() => scrollToSection('home')}
-              className="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors"
-              aria-label="Savvy Spectra Solutions home"
-            >
-              Savvy Spectra
-            </button>
+            />
           </div>
 
+          {/* ==== Desktop Navigation ==== */}
           <div className="hidden md:flex space-x-1">
             {navLinks.map((link) => (
               <button
@@ -86,6 +88,7 @@ const Navbar = () => {
             ))}
           </div>
 
+          {/* ==== Mobile Menu Toggle ==== */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
@@ -97,6 +100,7 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* ==== Mobile Menu ==== */}
       {isOpen && (
         <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-4 py-3 space-y-1">
