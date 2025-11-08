@@ -74,10 +74,10 @@ const Industries = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-            Industries <span className="text-blue-600">We Serve</span>
+            Industries <span className="text-[#084A8D]">We Serve</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Delivering specialized IT solutions across diverse sectors with industry-specific expertise
@@ -98,7 +98,8 @@ const Industries = () => {
               className="group relative bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border-2 border-gray-100 hover:border-blue-300 transition-all duration-300 hover:shadow-lg cursor-pointer"
             >
               <div className="flex flex-col items-center text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mb-4 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 group-hover:scale-110">
+               <div className="w-16 h-16 bg-[#084A8D1A] rounded-full flex items-center justify-center text-[#084A8D] mb-4 group-hover:bg-[#084A8D] group-hover:text-white transition-all duration-300 group-hover:scale-110">
+
                   {industry.icon}
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{industry.title}</h3>
@@ -110,19 +111,7 @@ const Industries = () => {
           ))}
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 text-center"
-        >
-          <div className="inline-block bg-blue-50 px-8 py-4 rounded-xl border border-blue-200">
-            <p className="text-gray-700">
-              <span className="font-bold text-blue-600">India-Wide Reach</span> — Serving clients across the nation with localized support
-            </p>
-          </div>
-        </motion.div>
+       
       </div>
     </section>
   );

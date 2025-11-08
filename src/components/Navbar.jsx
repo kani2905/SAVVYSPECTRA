@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import logo from '../assets/savvy-logo.jpg'; // <-- Use your new image here
+import logo from '../assets/savvy-logo.jpg'; 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -64,7 +64,7 @@ const Navbar = () => {
             <img
               src={logo}
               alt="Savvy Spectra Logo"
-              className="h-12 w-auto cursor-pointer"
+              className="h-14 w-auto cursor-pointer"
               onClick={() => scrollToSection('home')}
             />
           </div>
@@ -77,8 +77,9 @@ const Navbar = () => {
                 onClick={() => scrollToSection(link.id)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                   activeSection === link.id
-                    ? 'bg-blue-600 text-white'
-                    : 'text-gray-700 hover:bg-gray-100'
+                      ? 'bg-[#084A8D] text-white'
+                      : 'text-gray-700 hover:bg-gray-100'
+
                 }`}
                 aria-label={`Navigate to ${link.label}`}
                 aria-current={activeSection === link.id ? 'page' : undefined}
@@ -91,7 +92,8 @@ const Navbar = () => {
           {/* ==== Mobile Menu Toggle ==== */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
+            className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-[#E8F0FA] transition-colors"
+
             aria-label="Toggle mobile menu"
             aria-expanded={isOpen}
           >

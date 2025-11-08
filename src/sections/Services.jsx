@@ -70,10 +70,10 @@ const Services = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-            Our <span className="text-blue-600">Core Offerings</span>
+            Our <span className="text-[#084A8D]">Core Offerings</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Comprehensive IT solutions tailored to meet your business needs and drive digital transformation
@@ -95,12 +95,19 @@ const Services = () => {
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-full -mr-16 -mt-16 opacity-50 group-hover:scale-150 transition-transform duration-500"></div>
 
-              <div className={`relative w-16 h-16 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
+              <div className="flex items-center gap-4 mb-4">
+             <div className="relative w-12 h-12 bg-[#084A8D] rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
+
                 {service.icon}
               </div>
 
-              <h3 className="relative text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-              <p className="relative text-gray-600 leading-relaxed">{service.description}</p>
+              <h3 className="relative text-xl font-bold text-gray-900">
+                {service.title}
+              </h3>
+            </div>
+
+            <p className="relative text-gray-600 leading-relaxed">{service.description}</p>
+
             </motion.div>
           ))}
         </motion.div>

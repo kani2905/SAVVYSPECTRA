@@ -64,10 +64,10 @@ const WhyChooseUs = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-            Why <span className="text-blue-600">Choose Us</span>
+            Why <span className="text-[#084A8D]">Choose Us</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Partner with a team that understands your business needs and delivers excellence at every step
@@ -79,18 +79,21 @@ const WhyChooseUs = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6"
+
         >
           {reasons.map((reason, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+              className="group bg-white p-5 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+
             >
               <div className="flex items-start gap-6">
-                <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
+                <div className="flex-shrink-0 w-16 h-16 bg-[#084A8D] rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
                   {reason.icon}
                 </div>
+
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{reason.title}</h3>
                   <p className="text-gray-600 leading-relaxed">{reason.description}</p>
@@ -100,35 +103,7 @@ const WhyChooseUs = () => {
           ))}
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 md:p-12 text-center text-white"
-        >
-          <h3 className="text-3xl font-bold mb-4">Ready to Transform Your IT Infrastructure?</h3>
-          <p className="text-lg mb-8 text-blue-100 max-w-2xl mx-auto">
-            Let's discuss how we can help your business achieve its technology goals with smart, scalable solutions
-          </p>
-          <button
-            onClick={() => {
-              const element = document.getElementById('contact');
-              if (element) {
-                const offset = 80;
-                const elementPosition = element.offsetTop - offset;
-                window.scrollTo({
-                  top: elementPosition,
-                  behavior: 'smooth',
-                });
-              }
-            }}
-            className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-            aria-label="Schedule a consultation"
-          >
-            Schedule a Consultation
-          </button>
-        </motion.div>
+       
       </div>
     </section>
   );

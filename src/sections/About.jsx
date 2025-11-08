@@ -55,7 +55,7 @@ const About = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-            About <span className="text-blue-600">Savvy Spectra</span>
+            About <span className="text-[#084A8D]">Savvy Spectra</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Building trusted partnerships through innovative IT solutions and exceptional service delivery
@@ -75,7 +75,8 @@ const About = () => {
               variants={itemVariants}
               className="group p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-white border border-blue-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
+             <div className="w-16 h-16 bg-[#084A8D] rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
+
                 {feature.icon}
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
@@ -84,33 +85,7 @@ const About = () => {
           ))}
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 p-8 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl text-white"
-        >
-          <h3 className="text-2xl font-bold mb-4">Our Core Areas of Expertise</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[
-              'IT Infrastructure Design',
-              'Cloud Services',
-              'Networking Solutions',
-              'Cybersecurity',
-              'IT Product Reselling',
-              'Managed IT Services',
-            ].map((area, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-3 rounded-lg"
-              >
-                <div className="w-2 h-2 bg-blue-300 rounded-full"></div>
-                <span className="font-medium">{area}</span>
-              </div>
-            ))}
-          </div>
-        </motion.div>
+       
       </div>
     </section>
   );
