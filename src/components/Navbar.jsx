@@ -64,7 +64,7 @@ const Navbar = () => {
             <img
               src={logo}
               alt="Savvy Spectra Logo"
-              className="h-14 w-auto cursor-pointer"
+              className="h-16 w-auto cursor-pointer"
               onClick={() => scrollToSection('home')}
             />
           </div>
