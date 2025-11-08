@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import logo from '../assets/logo.jpg';
 
 const Home = () => {
   const scrollToSection = (id) => {
