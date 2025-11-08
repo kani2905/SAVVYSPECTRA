@@ -122,12 +122,13 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="relative flex items-start justify-center mt-14"
             >
-              <motion.img
+             <motion.img
                 animate={floatingAnimation}
-                src="./src/assets/logo.jpg"
+                src={logo}
                 alt="company logo"
                 className="w-[430px] h-[430px] object-contain drop-shadow-xl"
-              />
+/>
+
             </motion.div>
 
 
